@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A responsive photo album of temples from around the world.">
+    <meta name="author" content="Prosper Saize">
+    <title>Temple Album</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- CSS: mobile-first, then large-view override -->
+    <link rel="stylesheet" href="styles/temples.css">
+    <link rel="stylesheet" href="styles/temples-large.css">
+
+    <!-- Deferred JavaScript -->
+    <script src="scripts/temples.js" defer></script>
+</head>
+<body>
+
+    <header>
+        <h1 class="site-title">Temple Album</h1>
+
+        <button id="hamburger-btn" aria-label="Toggle navigation menu" aria-expanded="false">
+            &#9776;
+        </button>
+
+        <nav id="primary-nav">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Old</a></li>
+                <li><a href="#">New</a></li>
+                <li><a href="#">Large</a></li>
+                <li><a href="#">Small</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Temples Around the World</h1>
+
+        <div class="gallery">
+            <figure>
+                <img src="images/temple6.jpg" alt="Salt Lake Temple" loading="lazy" width="500" height="400">
+                <figcaption>Salt Lake Temple</figcaption>
+            </figure>
+
+            <figure>
+                <img src="images/temple10.jpg" alt="San Diego Temple" loading="lazy" width="500" height="400">
+                <figcaption>San Diego</figcaption>
+            </figure>
+
+            <figure>
+                <img src="images/temple1.jpg" alt="Zimbabwe" loading="lazy" width="500" height="400">
+                <figcaption>Zimbabwe Temple</figcaption>
+            </figure>
+
+            <figure>
+                <img src="images/temple11.jpg" alt="Portland oregon Temple" loading="lazy" width="500" height="400">
+                <figcaption>Portland Temple</figcaption>
+            </figure>
+
+            <figure>
+                <img src="images/temple2.jpg" alt="San Diego Temple" loading="lazy" width="500" height="400">
+                <figcaption>San Diego Temple</figcaption>
+            </figure>
+
+            <figure>
+                <img src="images/temple3.jpg" alt="Sacramento Califonia" loading="lazy" width="500" height="400">
+                <figcaption>Sacramento Temple</figcaption>
+            </figure>
+
+            <figure>
+                <img src="images/temple4.jpg" alt="Pocatello Temple" loading="lazy" width="500" height="400">
+                <figcaption>Pocatello Temple</figcaption>
+            </figure>
+
+            <figure>
+                <img src="images/temple5.jpg" alt="Oakland Temple" loading="lazy" width="500" height="400">
+                <figcaption>Oakland Temple</figcaption>
+            </figure>
+
+            <figure>
+                <img src="images/temple7.jpg" alt="Provo Utah Temple" loading="lazy" width="500" height="400">
+                <figcaption>Provo Utah Temple</figcaption>
+            </figure>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="year"></span> Prosper Saize. Zimbabwe.</p>
+        <p>Last Modified: <span id="lastModified"></span></p>
+    </footer>
+
+</body>
+</html>

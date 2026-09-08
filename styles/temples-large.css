@@ -1,0 +1,57 @@
+/* =========================================
+   Temple Album — Large Viewport Overrides
+   ========================================= */
+
+@media (min-width: 768px) {
+
+    header {
+        padding: 1.25rem 2rem;
+    }
+
+    .site-title {
+        font-size: 1.8rem;
+    }
+
+    /* Hamburger only needed on mobile */
+    #hamburger-btn {
+        display: none;
+    }
+
+    /* Nav always visible and inline on larger screens */
+    nav {
+        display: block !important;
+        width: auto;
+        order: 0;
+    }
+
+    nav ul {
+        flex-direction: row;
+        margin-top: 0;
+        gap: 0.5rem;
+    }
+
+    nav li {
+        border-top: none;
+    }
+
+    nav a {
+        padding: 0.5rem 1rem;
+        border-radius: 4px;
+    }
+
+    main > h1 {
+        font-size: 2.2rem;
+        margin-bottom: 2rem;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    main {
+        padding: 2.5rem 1.5rem;
+    }
+}
