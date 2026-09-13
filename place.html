@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zimbabwe | A Country Page</title>
+  <meta name="description" content="An overview of Zimbabwe: the Zambezi and Victoria Falls, Great Zimbabwe, current weather, and the country at a glance.">
+  <meta name="author" content="Prosper Saize">
+  <link rel="preconnect" href="https://images.unsplash.com">
+  <link rel="icon" href="data:,">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/place.css">
+  <script src="scripts/place.js" defer></script>
+</head>
+<body>
+
+  <header class="site-header">
+    <p class="wordmark">Zimbabwe</p>
+    <nav class="site-nav">
+      <a href="#glance">At a Glance</a>
+      <a href="#weather">Weather</a>
+      <a href="#landmarks">Landmarks</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <picture>
+        <source media="(min-width: 900px)"
+                srcset="https://images.unsplash.com/photo-1678059465100-2b1266b0c4e6?fm=webp&auto=format&fit=crop&q=80&w=1600 1600w,
+                        https://images.unsplash.com/photo-1678059465100-2b1266b0c4e6?fm=webp&auto=format&fit=crop&q=80&w=2200 2200w"
+                sizes="100vw">
+        <source media="(max-width: 899px)"
+                srcset="https://images.unsplash.com/photo-1678059465100-2b1266b0c4e6?fm=webp&auto=format&fit=crop&q=80&w=700&h=900 700w,
+                        https://images.unsplash.com/photo-1678059465100-2b1266b0c4e6?fm=webp&auto=format&fit=crop&q=80&w=1000&h=1200 1000w"
+                sizes="100vw">
+        <img src="https://images.unsplash.com/photo-1678059465100-2b1266b0c4e6?fm=webp&auto=format&fit=crop&q=80&w=1600"
+             alt="Aerial view of the Zambezi River gorge near Victoria Falls, Zimbabwe"
+             width="1600" height="900" loading="eager">
+      </picture>
+      <div class="hero-copy">
+        <h1>Where the Zambezi Falls</h1>
+        <p>Granite hills, msasa woodland, and the smoke that thunders — a first look at Zimbabwe.</p>
+      </div>
+    </section>
+
+    <section id="glance" class="glance">
+      <h2>At a Glance</h2>
+      <p>Zimbabwe sits on the high plateau of southern Africa, bounded by the Zambezi River in the north and the Limpopo in the south. Landlocked between Zambia, Mozambique, Botswana, and South Africa, it holds some of the continent's most striking geology: the basalt gorge at Victoria Falls, the granite kopjes of the Matobo Hills, and the dry-stone city of Great Zimbabwe, from which the country takes its name.</p>
+      <dl class="fact-list">
+        <div><dt>Capital</dt><dd>Harare</dd></div>
+        <div><dt>Languages</dt><dd>Shona, Ndebele, and English are the most widely spoken of 16 official languages</dd></div>
+        <div><dt>Currency</dt><dd>Zimbabwe Gold (ZiG) and the US dollar</dd></div>
+        <div><dt>Population</dt><dd>About 17 million</dd></div>
+      </dl>
+    </section>
+
+    <section id="weather" class="weather">
+      <h2 class="section-title--weather">Weather</h2>
+      <svg class="weather-icon-mobile" viewBox="0 0 64 64" width="56" height="56" aria-hidden="true" focusable="false">
+        <circle cx="24" cy="26" r="12" fill="#C99A2E"/>
+        <g fill="#F3ECDA" stroke="#6B675E" stroke-width="1.5">
+          <ellipse cx="34" cy="38" rx="18" ry="12"/>
+          <ellipse cx="22" cy="34" rx="12" ry="9"/>
+        </g>
+      </svg>
+      <div class="weather-grid">
+        <div class="weather-now">
+          <p class="temp">9°C</p>
+          <p class="condition">Partly cloudy, light haze</p>
+        </div>
+        <dl class="weather-details">
+          <div><dt>Wind speed</dt><dd>14 km/h</dd></div>
+          <div><dt>Wind chill</dt><dd id="wind-chill">--</dd></div>
+          <div><dt>Season</dt><dd>Dry season (May–October)</dd></div>
+        </dl>
+      </div>
+      <p class="weather-note">Readings are static for this assignment; the wind chill above is calculated by JavaScript when the page loads.</p>
+    </section>
+
+    <section id="landmarks" class="landmarks">
+      <h2>Landmarks</h2>
+      <div class="landmark-grid">
+        <figure>
+          <img src="https://images.unsplash.com/photo-1678059465100-2b1266b0c4e6?fm=webp&auto=format&fit=crop&q=80&w=700"
+               alt="Aerial view of the Zambezi gorge near Victoria Falls" loading="lazy" width="700" height="500">
+          <figcaption>Victoria Falls, on the Zambezi River</figcaption>
+        </figure>
+        <figure>
+          <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Eastern-enclosure-great-zimbabwe.jpg?width=700"
+               alt="Dry-stone walls of the Eastern Enclosure at Great Zimbabwe" loading="lazy" width="700" height="467">
+          <figcaption>Great Zimbabwe, an 11th–15th century stone city</figcaption>
+        </figure>
+        <figure>
+          <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Curled%20trunk.jpg?width=700"
+               alt="Elephant at a waterhole in Hwange National Park" loading="lazy" width="700" height="525">
+          <figcaption>Elephants at a waterhole, Hwange National Park</figcaption>
+        </figure>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="current-year"></span> Zimbabwe Country Page. Photos: Unsplash License and Wikimedia Commons.</p>
+    <p>Last updated: <span id="last-modified"></span></p>
+  </footer>
+
+</body>
+</html>

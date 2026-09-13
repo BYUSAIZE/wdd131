@@ -1,0 +1,153 @@
+:root {
+  --color-bg: #F3ECDA;
+  --color-ink: #24211B;
+  --color-green: #14532D;
+  --color-gold: #C99A2E;
+  --color-red: #A13D2B;
+  --color-stone: #6B675E;
+  --font-display: "Fraunces", serif;
+  --font-body: "Work Sans", sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--color-bg);
+  color: var(--color-ink);
+  font-family: var(--font-body);
+  line-height: 1.55;
+}
+
+h1, h2 { font-family: var(--font-display); margin: 0 0 0.5rem; }
+
+a { color: var(--color-green); }
+
+/* Header */
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  border-bottom: 3px solid var(--color-green);
+}
+
+.wordmark {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.4rem;
+  margin: 0;
+  color: var(--color-green);
+}
+
+.site-nav a {
+  margin-left: 1.25rem;
+  text-decoration: none;
+  font-weight: 500;
+  color: var(--color-ink);
+}
+
+.site-nav a:hover { color: var(--color-red); }
+
+/* Hero */
+.hero { position: relative; }
+
+.hero picture, .hero img {
+  display: block;
+  width: 100%;
+  height: 60vh;
+  min-height: 320px;
+  object-fit: cover;
+}
+
+.hero-copy {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  padding: 1.5rem;
+  max-width: 34rem;
+  background: linear-gradient(0deg, rgba(20,17,12,0.72), rgba(20,17,12,0));
+  color: #F3ECDA;
+}
+
+.hero-copy h1 { font-size: clamp(1.8rem, 5vw, 3rem); }
+.hero-copy p { margin: 0.5rem 0 0; font-size: 1.05rem; }
+
+/* Sections */
+section { padding: 2.5rem 1.5rem; max-width: 56rem; margin: 0 auto; }
+
+.fact-list {
+  display: grid;
+  gap: 0.75rem 2rem;
+  grid-template-columns: 1fr;
+  margin-top: 1.25rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--color-stone);
+}
+
+.fact-list div { display: flex; justify-content: space-between; gap: 1rem; border-bottom: 1px dashed var(--color-stone); padding-bottom: 0.5rem; }
+.fact-list dt { color: var(--color-stone); }
+.fact-list dd { margin: 0; font-weight: 500; text-align: right; }
+
+/* Weather */
+.weather { background: #fff; border-top: 1px solid var(--color-stone); border-bottom: 1px solid var(--color-stone); }
+
+.section-title--weather { display: inline-block; }
+.section-title--weather::after { content: none; }
+
+.weather-icon-mobile { display: block; margin: 0.25rem 0 1rem; }
+
+.weather-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  align-items: start;
+}
+
+.weather-now .temp { font-family: var(--font-display); font-size: 3rem; margin: 0; color: var(--color-red); }
+.weather-now .condition { margin: 0.25rem 0 0; color: var(--color-stone); }
+
+.weather-details div { display: flex; justify-content: space-between; padding: 0.35rem 0; border-bottom: 1px dashed var(--color-stone); }
+.weather-details dt { color: var(--color-stone); }
+.weather-details dd { margin: 0; font-weight: 500; }
+
+.weather-note { font-size: 0.85rem; color: var(--color-stone); margin-top: 1.25rem; }
+
+/* Landmarks */
+.landmark-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  margin-top: 1.25rem;
+}
+
+.landmark-grid figure { margin: 0; }
+.landmark-grid img { width: 100%; height: 14rem; object-fit: cover; display: block; }
+.landmark-grid figcaption { margin-top: 0.4rem; font-size: 0.9rem; color: var(--color-stone); }
+
+/* Footer */
+.site-footer {
+  padding: 1.5rem;
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--color-stone);
+  border-top: 3px solid var(--color-green);
+}
+
+.site-footer p { margin: 0.25rem 0; }
+
+/* ===== Media queries ===== */
+
+/* Wide view: swap the SVG icon for the emoticon pseudo-element, and open up layouts */
+@media (min-width: 700px) {
+  .weather-icon-mobile { display: none; }
+  .section-title--weather::after { content: "⛅"; margin-left: 0.5rem; }
+
+  .fact-list { grid-template-columns: 1fr 1fr; }
+  .weather-grid { grid-template-columns: 1fr 2fr; }
+  .landmark-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (min-width: 700px) and (max-width: 899px) {
+  .hero img, .hero picture { height: 50vh; }
+}
