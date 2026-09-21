@@ -88,7 +88,7 @@ function displayTemples(templeList) {
     card.classList.add("temple-card");
 
     card.innerHTML = `
-      <img src="${temple.imageUrl}" alt="${temple.templeName}" loading="lazy" />
+      <img src="${temple.imageUrl}" alt="${temple.templeName}" loading="lazy">
       <figcaption>
         <h3>${temple.templeName}</h3>
         <p><strong>Location:</strong> ${temple.location}</p>
