@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review Confirmation - WDD 131</title>
+    <link rel="stylesheet" href="styles/form.css">
+</head>
+<body>
+    <header>
+        <h1>Thank You!</h1>
+    </header>
+    <main>
+        <section class="confirmation-card">
+            <h2>Your review has been successfully submitted.</h2>
+            <p>Total reviews submitted: <span id="counter">0</span></p>
+            <a href="form.html" class="button">Submit Another Review</a>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2026 | Prosper Saize | WDD 131 Product Review</p>
+    </footer>
+
+    <script>
+        // Retrieve current count from localStorage or initialize to 0
+        let reviewCount = Number(localStorage.getItem("reviewCount-ls")) || 0;
+
+        // Increment the count upon successful page load
+        reviewCount++;
+
+        // Store the updated count back into localStorage
+        localStorage.setItem("reviewCount-ls", reviewCount);
+
+        // Display the count on the page
+        document.getElementById("counter").textContent = reviewCount;
+    </script>
+</body>
+</html>
