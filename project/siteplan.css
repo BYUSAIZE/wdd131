@@ -4,8 +4,6 @@
    applied here so the document itself demonstrates them.
    ========================================================== */
 
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Source+Sans+3:wght@400;600&display=swap');
-
 :root {
   --asphalt: #2B2B2B;      /* body text, footer background */
   --signal-green: #2F8F4E; /* headings, nav, section labels */
@@ -114,6 +112,13 @@ ul.scenario-list li {
   font-size: 0.9rem;
 }
 .swatch-label strong { display: block; font-family: 'Oswald', sans-serif; }
+
+/* Swatch color classes — replaces inline style="background:#..." */
+.swatch-asphalt  { background: var(--asphalt); }
+.swatch-green    { background: var(--signal-green); }
+.swatch-amber    { background: var(--warning-amber); }
+.swatch-concrete { background: var(--concrete); }
+.swatch-panel    { background: var(--panel); border-bottom: 1px solid var(--line); }
 
 /* ---------- Typography samples ---------- */
 .type-sample { margin-bottom: 1.25rem; }
