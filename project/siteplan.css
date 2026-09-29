@@ -1,0 +1,213 @@
+/* ==========================================================
+   Street Sweep — Site Plan Stylesheet
+   Color schema and typography defined in the plan below are
+   applied here so the document itself demonstrates them.
+   ========================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Source+Sans+3:wght@400;600&display=swap');
+
+:root {
+  --asphalt: #2B2B2B;      /* body text, footer background */
+  --signal-green: #2F8F4E; /* headings, nav, section labels */
+  --warning-amber: #F2A900;/* accents, links, highlight borders */
+  --concrete: #EDEBE6;     /* page background */
+  --panel: #FFFFFF;        /* content panels */
+  --line: #C9C5BC;         /* hairline dividers, grid lines */
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--concrete);
+  color: var(--asphalt);
+  font-family: 'Source Sans 3', sans-serif;
+  line-height: 1.55;
+}
+
+h1, h2, h3 {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  color: var(--signal-green);
+  margin-top: 0;
+}
+
+a { color: var(--signal-green); }
+a:hover { color: var(--warning-amber); }
+
+/* ---------- Page header (site plan doc, not the future website) ---------- */
+.plan-header {
+  background: var(--asphalt);
+  color: var(--panel);
+  padding: 2.5rem 1.5rem;
+  border-bottom: 6px solid var(--warning-amber);
+}
+.plan-header h1 {
+  color: var(--panel);
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  margin-bottom: 0.25rem;
+}
+.plan-header p {
+  margin: 0;
+  color: var(--line);
+  font-size: 1rem;
+}
+
+main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 4rem;
+}
+
+section {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-left: 6px solid var(--signal-green);
+  padding: 1.75rem 2rem;
+  margin-bottom: 2rem;
+}
+
+section h2 {
+  font-size: 1.4rem;
+  border-bottom: 2px solid var(--concrete);
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.site-name-block {
+  border-left-color: var(--warning-amber);
+}
+
+.domain-note {
+  display: inline-block;
+  margin-top: 0.5rem;
+  padding: 0.25rem 0.6rem;
+  background: var(--concrete);
+  border: 1px dashed var(--line);
+  font-family: monospace;
+  font-size: 0.9rem;
+}
+
+ul.scenario-list {
+  padding-left: 1.2rem;
+}
+ul.scenario-list li {
+  margin-bottom: 0.6rem;
+}
+
+/* ---------- Color schema swatches ---------- */
+.swatches {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+.swatch {
+  border: 1px solid var(--line);
+  overflow: hidden;
+}
+.swatch-color { height: 70px; }
+.swatch-label {
+  padding: 0.6rem 0.75rem;
+  background: var(--panel);
+  font-size: 0.9rem;
+}
+.swatch-label strong { display: block; font-family: 'Oswald', sans-serif; }
+
+/* ---------- Typography samples ---------- */
+.type-sample { margin-bottom: 1.25rem; }
+.type-sample .tag {
+  display: inline-block;
+  font-family: monospace;
+  font-size: 0.8rem;
+  color: var(--asphalt);
+  background: var(--concrete);
+  padding: 0.1rem 0.5rem;
+  margin-bottom: 0.35rem;
+}
+.type-sample .heading-demo {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 700;
+  font-size: 1.6rem;
+  color: var(--signal-green);
+}
+.type-sample .body-demo {
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 1rem;
+}
+
+/* ---------- Wireframes ---------- */
+.wireframe-group {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  margin-top: 1rem;
+}
+.wireframe-caption {
+  font-family: 'Oswald', sans-serif;
+  font-size: 0.95rem;
+  color: var(--asphalt);
+  margin: 0.5rem 0 0;
+  text-align: center;
+}
+
+.wf-mobile {
+  width: 220px;
+  border: 3px solid var(--asphalt);
+  padding: 8px;
+  background: var(--concrete);
+}
+.wf-desktop {
+  flex: 1;
+  min-width: 380px;
+  border: 3px solid var(--asphalt);
+  padding: 10px;
+  background: var(--concrete);
+}
+
+.wf-block {
+  background: var(--panel);
+  border: 1px dashed var(--line);
+  color: var(--asphalt);
+  font-family: monospace;
+  font-size: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0.4rem;
+}
+
+.wf-header   { background: var(--asphalt); color: var(--panel); border: none; }
+.wf-hero     { background: var(--signal-green); color: var(--panel); border: none; height: 70px; }
+.wf-cta      { background: var(--warning-amber); color: var(--asphalt); border: none; }
+
+.wf-mobile .wf-header { padding: 10px 6px; margin-bottom: 6px; }
+.wf-mobile .wf-hero { margin-bottom: 6px; }
+.wf-mobile .wf-block { height: 46px; margin-bottom: 6px; }
+.wf-mobile .wf-cta { height: 32px; }
+
+.wf-desktop .wf-header {
+  padding: 10px;
+  margin-bottom: 8px;
+  display: flex;
+  justify-content: space-between;
+}
+.wf-desktop .wf-hero { margin-bottom: 8px; }
+.wf-desktop .wf-row {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+.wf-desktop .wf-row .wf-block { flex: 1; height: 90px; }
+.wf-desktop .wf-cta { height: 34px; }
+
+footer {
+  text-align: center;
+  padding: 1.5rem;
+  color: var(--panel);
+  background: var(--asphalt);
+  font-size: 0.85rem;
+}
