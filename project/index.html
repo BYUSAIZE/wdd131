@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Street Sweep — Litter Awareness & Local Cleanups</title>
+  <meta name="description" content="Street Sweep raises awareness about littering's impact and connects volunteers with local cleanup events.">
+  <meta name="author" content="Prosper Saize">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+  <script src="main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html">Street<span>Sweep</span></a>
+      <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">Menu ☰</button>
+      <nav class="main-nav" aria-label="Primary">
+        <ul>
+          <li><a href="index.html" aria-current="page">Home</a></li>
+          <li><a href="impact.html">Impact</a></li>
+          <li><a href="get-involved.html">Get Involved</a></li>
+          <li><a href="references.html">References</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <section class="hero">
+      <div class="hero-text">
+        <h1>Every piece of litter has somewhere to go. Make it a bin, not the street.</h1>
+        <p>
+          Street Sweep tracks the real impact litter has on our neighborhoods,
+          waterways, and wildlife — and connects you with cleanup events where
+          you can actually do something about it.
+        </p>
+        <div class="hero-stat">
+          <strong>2.5 bags</strong>
+          average litter collected per volunteer, per cleanup
+        </div>
+        <div>
+          <a class="btn btn-primary" href="get-involved.html">Find a Cleanup</a>
+          <a class="btn btn-secondary" href="impact.html">See the Impact</a>
+        </div>
+      </div>
+      <div class="hero-media">
+        <img
+          src="https://picsum.photos/id/1040/900/650"
+          alt="A quiet tree-lined park path, the kind of public space litter cleanups aim to protect"
+          width="900" height="650">
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Why this matters</h2>
+      <div class="two-col">
+        <div class="panel">
+          <h3>It doesn't stay where it's dropped</h3>
+          <p>
+            Rain and wind carry street litter into storm drains, creeks, and
+            eventually rivers and oceans — turning a dropped wrapper into a
+            waterway problem miles away.
+          </p>
+        </div>
+        <div class="panel">
+          <h3>It's a solvable problem</h3>
+          <p>
+            Unlike many environmental issues, litter responds directly to
+            local action. A two-hour cleanup with a handful of volunteers
+            visibly changes a street or park.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Upcoming cleanups</h2>
+      <div id="event-list" class="card-grid" aria-live="polite">
+        <!-- Rendered by renderEvents() in main.js -->
+      </div>
+      <a class="btn btn-primary" href="get-involved.html">See all cleanups & sign up</a>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <nav class="footer-nav" aria-label="Footer">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="impact.html">Impact</a></li>
+          <li><a href="get-involved.html">Get Involved</a></li>
+          <li><a href="references.html">References</a></li>
+        </ul>
+      </nav>
+      <p>Street Sweep · Local litter awareness & cleanups</p>
+    </div>
+    <p class="footer-fine">© 2026 Street Sweep. Built for WDD 131.</p>
+  </footer>
+
+</body>
+</html>
